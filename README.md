@@ -1,15 +1,25 @@
 ## LinkedIn Experience Scraper 
 _started in August 2021_ 
 
-The goal is to produce a script that can calculate years of experience of a LinkedIn profile given the profile url. 
+## Installation 
+
+`python3 -m venv env . env/bin/activate pip3 install --upgrade pip pip3 install -r requirements.txt`
+
+## Testing
+
+TBD
+
+## Description
+This program scrapes a LinkedIn profile's relevant years of experience. 
 
 There are two files:
-- `extract_experience_from_url.py` is the modularized version of the script.
-- `years_from_url.py` is the rough version for testing purposes.
+- `scraper.py` has the scraper bot lass
+- `run.py` is used to run the program
+- The list of relevant titles are in `data/title_index.txt`
 
-To use, simply replace the following in the script:
-- Chrome driver path
-- login email address 
-- login password 
+Enter the following in `data/constants.py file`:
+- Chrome web driver path. Download driver from [here](https://chromedriver.chromium.org/)
+- LinkedIn login email address 
+- LinkedIn login password 
 
-The text file contains the index of all the job titles that are relevant to Grit. The script currently assumes that this file is in the same directory as the script. 
+The output is a dictionary showing the relevant experiences in years.
